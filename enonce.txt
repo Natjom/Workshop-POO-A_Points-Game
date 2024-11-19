@@ -1,0 +1,22 @@
+1. Joueur (classe Player) :
+o Chaque joueur a un nom, une quantité d'argent, des points de vie et un inventaire
+d'armes.
+o Peut acheter des armes dans une boutique en fonction de son solde.
+o Peut attaquer des monstres pour gagner de l'argent.
+o Peut être endommagé par les monstres.
+2. Armes (classe de base Weapon et classes dérivées) :
+o Une classe de base Weapon qui inclut des attributs communs : nom, prix, et
+puissance d'attaque.
+o Différents types d'armes héritent de la classe Weapon, par exemple :
+- Sword (épée) : attaque de puissance moyenne.
+- Bow (arc) : attaque de puissance plus faible mais coût réduit.
+- MagicWand (baguette magique) : attaque puissante mais coûteuse.
+3. Monstres (classe Monster) :
+o Les monstres ont des points de vie et une force d'attaque.
+o Lorsqu'un joueur tue un monstre, il gagne une certaine somme d'argent.
+4. Boutique (classe Shop) :
+o Le joueur peut acheter des armes ici en fonction de son budget.
+5. Système de Combat :
+o Le joueur choisit une arme dans son inventaire pour attaquer un monstre.
+o Si le monstre est vaincu, le joueur reçoit une récompense monétaire.
+o Les monstres peuvent riposter et infliger des dégâts au joueur.
