@@ -15,8 +15,10 @@ void Inventory::addWeapon(const std::string& name, int cost, int atk) {
 
     // Afficher toutes les armes dans l'inventaire
     void Inventory::displayInventory() const {
-        std::cout << "\nInventory:\n";
-        if (weapon)
+        std::cout << "Inventory:\n";
+        if (weapons.size() == 0) {
+            std::cout << "Empty Inventory ! " << std::endl;
+        }
         for (const auto& weapon : weapons) {
             std::cout << "Name: " << weapon.name
                       << ", Cost: " << weapon.cost

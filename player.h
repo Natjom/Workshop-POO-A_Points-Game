@@ -21,6 +21,8 @@ public:
 
     void info();
 
+    void setMoula(int n) {money = n;};
+
     void buyWeapon(Weapon weapon);
     void attack(Monster monstre);
     void hurt(int atk);

@@ -31,13 +31,22 @@ Player::Player(std::string name, int money, int health, Weapon firstHandWeapon, 
 void Player::info() 
 {
     std::cout << "\nPlayer : " << std::endl;
-    std::cout << "Name : " << name << std::endl;
-    std::cout << "Money : " << money << std::endl;
-    std::cout << "Health : " << health << std::endl;
+    std::cout << "Name: " << name << ", " << "Money: " << money << ", " << "Health: " << health << std::endl;
+    std::cout << "Main hand weapon : " << std::endl;
     firstHandWeapon.info();
     inv.displayInventory();
 };
 
 
-
-    Inventory inv;
+void Player::buyWeapon(Weapon weapon) 
+{
+    if (weapon.cost < money) 
+    {
+        std::cout << "You bought an " << weapon.name << " !" << std::endl;
+        money -= weapon.cost;
+        inv.addWeapon(weapon.name, weapon.cost, weapon.atk);
+    }
+    else {
+        std::cout << "Not enough money to buy a " << weapon.name << " !" << std::endl;
+    }
+};
